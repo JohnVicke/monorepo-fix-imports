@@ -1,0 +1,4 @@
+{
+  "extends": "airbnb",
+  "ignorePatterns": ["out", "dist", "**/*.d.ts"]
+}
