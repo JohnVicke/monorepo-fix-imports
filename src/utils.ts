@@ -26,7 +26,6 @@ export const getStartIndex = (line: string, packageImport: string): number => {
 };
 
 export const getRelativePackagePath = (line: string, packageImport: string) => {
-  console.log({ line: line, package: packageImport });
   const start = getStartIndex(line, packageImport);
   const end = line.lastIndexOf("'");
   return line.slice(start, end);
