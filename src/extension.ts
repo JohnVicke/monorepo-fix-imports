@@ -19,6 +19,7 @@ import {
 
 import {
   COMMAND_NAME,
+  CONFIG_OPTIONS,
   ESLINT_ERROR_MESSAGE,
   EXTENSION_NAME
 } from './constants';
@@ -44,7 +45,7 @@ class FileSystemListener {
     const subscriptions: Disposable[] = [];
     const config = workspace.getConfiguration(EXTENSION_NAME);
     // TODO: Support formatOnSave
-    if (config.has('formatOnSave')) {
+    if (config.has(CONFIG_OPTIONS.FIX_ON_SAVE)) {
       if (isSupportedLanguage(window.activeTextEditor?.document.languageId)) {
         workspace.onWillSaveTextDocument(
           (e) => {
